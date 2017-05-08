@@ -10,10 +10,12 @@ import {
   Text,
   View
 } from 'react-native';
+import Header from './src/components/header';
 
 const App = () => {
-    return (
-      <View >
+
+    return  <View >
+       <Header/>
         <Text >
           Welcome to React Native!
         </Text>
@@ -24,10 +26,8 @@ const App = () => {
           Double tap R on your keyboard to reload,{'\n'}
           Shake or press menu button for dev menu
         </Text>
-      </View>
-    );
-
-}
+      </View>;
+};
 
 
 AppRegistry.registerComponent('workshop', () => App);
