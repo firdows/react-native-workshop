@@ -13,7 +13,7 @@ import {
 import Header from './src/components/header';
 
 const App = () => {
-    return <Header/>;
+    return <Header headerText={'อัลบั้ม'}/>;
 };
 
 
