@@ -1,16 +1,25 @@
 
 import React from 'react';
-import {Text} from 'react-native';
+import {Text,View} from 'react-native';
 
 const Header = () => {
-  const {textStyle} = Styles;
+  const {viewStyle,textStyle} = Styles;
 
-  return <Text style={textStyle}>Albums!</Text>;
+  return (
+    <View style={viewStyle}>
+      <Text style={textStyle}>Albums!</Text>
+    </View>
+  );
 };
 
 const Styles = {
+  viewStyle:{
+    backgroundColor:"#e8e8e8",
+    justifyContent:"center",
+    alignItems:"center",
+  },
   textStyle:{
-    fontSize:25,
+    fontSize:25
   }
 }
 
