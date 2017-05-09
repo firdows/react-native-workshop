@@ -1,16 +1,15 @@
-import React from 'react';
-import ReactNative,{View,Text} from 'react-native';
+import React , { Component } from 'react';
+import ReactNative, { View , Text } from 'react-native';
 
 
-const AlbumList = () => {
-  return (
-    <View>
-      <Text>AlbumList !!!!</Text>
-    </View>
-  );
+class AlbumList extends Component{
+  render (){
+    return (
+      <View>
+        <Text>AlbumList 123</Text>
+      </View>
+    );
+  }
 }
-
-
-
 
 export default AlbumList;
