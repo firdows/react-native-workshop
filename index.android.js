@@ -11,9 +11,15 @@ import {
   View
 } from 'react-native';
 import Header from './src/components/header';
+import AlbumList from './src/components/AlbumList';
 
 const App = () => {
-    return <Header headerText={'อัลบั้ม'}/>;
+    return (
+      <View>
+        <Header headerText={'อัลบั้ม'}/>
+        <AlbumList />
+      </View>
+    );
 };
 
 
