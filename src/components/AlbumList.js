@@ -3,7 +3,12 @@ import ReactNative, { View , Text } from 'react-native';
 
 
 class AlbumList extends Component{
-  render (){
+  componentWillMount(){
+    console.log("componentWillMount as Alum List ");
+    //debugger;
+  }
+
+  render (){  
     return (
       <View>
         <Text>AlbumList 123</Text>
