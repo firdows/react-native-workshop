@@ -8,10 +8,11 @@ class AlbumList extends Component{
   state = { albums:[]};
 
   componentWillMount(){
-    //console.log("componentWillMount as Alum List ");
+    console.log("componentWillMount as Alum List ");
     //debugger;
     axios.get('http://rallycoding.herokuapp.com/api/music_albums')
       .then(response => this.setState({albums:response.data}));
+      console.log("end componentWillMount");
   }
 
   renderAlbums (){
@@ -20,7 +21,7 @@ class AlbumList extends Component{
   }
 
   render (){
-    console.log(this.state);
+    //console.log(this.state);
 
     return (
       <View>
