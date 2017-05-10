@@ -7,13 +7,12 @@ import Card from './Card';
 
 const AlbumDetail = (props) => {
   return (
-    <View>
+    <Card>
 
-      <Card />
       <Text>{props.album.title}</Text>
       <Text>{props.album.artist}</Text>
 
-    </View>
+    </Card>
   );
 };
 
