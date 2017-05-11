@@ -1,13 +1,12 @@
 import React from 'react';
-import {View,Text,Image,Linking} from 'react-native';
+import { View, Text, Image, Linking } from 'react-native';
 
-import Card from './Card';
-import CardSection from './CardSection';
-import Button from './Button';
+import { Card, CardSection, Button } from '../common';
+// import CardSection from '../common/CardSection';
+// import Button from '../common/Button';
 
 
-
-const AlbumDetail = ({album}) => {
+const AlbumDetail = ({ album }) => {
   const { title, artist, thumbnail_image, image, url } = album;
   const {
      thumbnailStyle,
@@ -23,7 +22,7 @@ const AlbumDetail = ({album}) => {
           <View style={thumbnailContainerStyle}>
             <Image
               style={thumbnailStyle}
-              source={{ uri:thumbnail_image }}
+              source={{ uri: thumbnail_image }}
             />
           </View>
 
@@ -36,11 +35,11 @@ const AlbumDetail = ({album}) => {
       <CardSection>
           <Image
             style={imageStyle}
-            source={{ uri:image }}
+            source={{ uri: image }}
           />
       </CardSection>
       <CardSection>
-        <Button onPress={ ()=>Linking.openURL(url) }  >
+        <Button onPress={() => Linking.openURL(url)} >
           Buy Now!
         </Button>
       </CardSection>
@@ -49,31 +48,31 @@ const AlbumDetail = ({album}) => {
 };
 
 const styles = {
-  headerContentStyle:{
+  headerContentStyle: {
     flexDirection: 'column',
     justifyContent: 'space-around',
     // padding:10,
     // paddingTop:5,
   },
-  headerTextStyle:{
-    fontSize:18
+  headerTextStyle: {
+    fontSize: 18
   },
-  thumbnailStyle:{
+  thumbnailStyle: {
     height: 50,
-    width:50,
+    width: 50,
   },
-  thumbnailContainerStyle:{
+  thumbnailContainerStyle: {
       justifyContent: 'center',
       alignItems: 'center',
       marginLeft: 10,
       marginRight: 10,
   },
-  imageStyle:{
-    flex:1,
+  imageStyle: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     height: 300,
-    width:null,
+    width: null,
   }
 };
 
