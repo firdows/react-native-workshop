@@ -40,7 +40,7 @@ const AlbumDetail = ({album}) => {
           />
       </CardSection>
       <CardSection>
-        <Button title={'View'} />
+        <Button onPress={ ()=>alert(title) } title={'View'} />
       </CardSection>
     </Card>
   );
