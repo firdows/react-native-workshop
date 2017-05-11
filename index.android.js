@@ -4,23 +4,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
-import {
-  AppRegistry,
-  Text,
-  View
-} from 'react-native';
-import Header from './src/components/header';
-import AlbumList from './src/components/AlbumList';
-
-const App = () => {
-    return (
-      <View style={{ flex:1 }}>
-        <Header headerText={'อัลบั้ม'}/>
-        <AlbumList />
-      </View>
-    );
-};
-
+import { AppRegistry } from 'react-native';
+import App from './src/app';
 
 AppRegistry.registerComponent('workshop', () => App);
