@@ -15,7 +15,11 @@ class LoginForm extends Component {
                     style={{ height: 40, width: null, flex: 1 }} 
                     placeholder={'Email'}
                     />*/}
-                <Input label={'Email'} />
+                <Input 
+                    label={'Email'}
+                    valute={this.state.text}
+                    onChangeText={text => this.setState({ text })}
+                 />
                 </CardSection>
 
                 <CardSection>
