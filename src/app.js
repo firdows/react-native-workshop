@@ -22,6 +22,7 @@ class App extends Component {
     const firebaseApp = firebase.initializeApp(firebaseConfig);
 
     firebase.auth().onAuthStateChanged((user) => {
+      console.log({ "user": user });
       if (user) {
         this.setState({ loggendIn: true });
       } else {
@@ -29,19 +30,21 @@ class App extends Component {
       }
     });
 
-    console.log(firebaseApp);
+    //console.log(firebaseApp);
   }
 
   runderContent() {
     switch (this.state.loggendIn) {
       case true:
-        return <Button>Log Out</Button>;
-
+        return (
+        <Button onPress={() => firebase.auth().signOut()}>
+          Log Out
+        </Button>
+        );
       case false:
-      return <LoginForm />;
-
+        return <LoginForm />;
       default:
-        return <Spinner size="large" /> ;
+        return <Spinner size="large" />;
     }
 
     /*if (this.state.loggendIn) {
