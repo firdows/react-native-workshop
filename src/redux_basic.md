@@ -1,4 +1,4 @@
-# Exsample Redux
+# Example Redux
 ### 78. The Basics of Redux & 79. More on Redux
 
 ```javascript
