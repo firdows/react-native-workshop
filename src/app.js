@@ -8,7 +8,7 @@ import LoginForm from './components/auth/LoginForm';
 
 
 class App extends Component {
-  //const firebase = firebase;
+  state = { loggendIn: false }
 
   componentWillMount() {
     const firebaseConfig = {
@@ -20,6 +20,15 @@ class App extends Component {
       messagingSenderId: '443475363193'
     };
     const firebaseApp = firebase.initializeApp(firebaseConfig);
+
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({ loggendIn: true });
+      } else {
+        this.setState({ loggendIn: false });
+      }
+    });
+
     console.log(firebaseApp);
   }
 
