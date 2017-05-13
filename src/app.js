@@ -2,13 +2,13 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import * as firebase from 'firebase';
-import { Header } from './components/common';
+import { Header, Button, Spinner } from './components/common';
 //import AlbumList from './components/album/AlbumList';
 import LoginForm from './components/auth/LoginForm';
 
 
 class App extends Component {
-  state = { loggendIn: false }
+  state = { loggendIn: null }
 
   componentWillMount() {
     const firebaseConfig = {
@@ -32,12 +32,35 @@ class App extends Component {
     console.log(firebaseApp);
   }
 
+  runderContent() {
+    switch (this.state.loggendIn) {
+      case true:
+        return <Button>Log Out</Button>;
+
+      case false:
+      return <LoginForm />;
+
+      default:
+        return <Spinner size="large" /> ;
+    }
+
+    /*if (this.state.loggendIn) {
+      return (
+        <Button>
+          Log Out
+        </Button>
+      );
+    } else {
+      return (<LoginForm />);
+    }*/
+  }
+
   render() {
     return (
       <View style={{ flex: 1 }}>
         <Header headerText={'Authentication'} />
         {/*<AlbumList />*/}
-        <LoginForm />
+        {this.runderContent()}
       </View>
     );
   }
