@@ -13,7 +13,7 @@ class App extends Component {
       <Provider store={createStore(reducers)}>
         <View >
           <Header headerText={'Tech Stack Redux'} />
-        
+
         </View>
       </Provider>
     );
