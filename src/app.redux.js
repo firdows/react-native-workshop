@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={createStore(reducers)}>
-        <View style={{ flex: 1 }}>
+        <View >
           <Header headerText={'Tech Stack Redux'} />
         
         </View>
